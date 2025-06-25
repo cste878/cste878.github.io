@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戸田 天太 | ポートフォリオ</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #005CAF; /* 日本大学のスクールカラーをイメージ */
+            padding-bottom: 10px;
+            color: #005CAF;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.4em;
+            border-left: 5px solid #F39800; /* 日本大学のスクールカラーをイメージ */
+            padding-left: 10px;
+        }
+        p, li {
+            font-size: 1em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>戸田 天太 ポートフォリオ</h1>
+        </header>
+
+        <main>
+            <section id="profile">
+                <h2>プロフィール (Profile)</h2>
+                <p><strong>名前:</strong> 戸田 天太 (Tenta Toda)</p>
+                <p><strong>所属:</strong> 日本大学大学院 理工学研究科 情報科学専攻</p>
+            </section>
+
+            <section id="research">
+                <h2>研究概要 (Research)</h2>
+                <h3>人間の目の構造を模倣したCGH再生シミュレーションのアプリ化</h3>
+                <p>
+                    指導教員: 山口 健 准教授 (日本大学 理工学部 応用情報工学科)
+                </p>
+                <h4>研究背景と目的</h4>
+                <p>
+                    計算機合成ホログラム（CGH: Computer-Generated Hologram）は、3次元情報を記録・再生する技術です。しかし、高解像度のCGHを物理的に出力するには長時間を要するという課題がありました。従来の研究室のプログラムでは、CGHデータの一部のみを計算することで再生像を高速に確認していましたが、これはホログラム全体を再生した結果とは異なり、部分的なものでした。
+                </p>
+                <p>
+                    本研究ではこの課題を解決するため、CGHの干渉縞全体に仮想的に光を照射し、それが人間の目に届くまでの光の伝搬過程をシミュレーションするプログラムを開発しました。これにより、現実世界でホログラムを観察する際の条件に近い、より正確な再生像の予測を目的としました。
+                </p>
+
+                <h4>提案手法</h4>
+                <p>
+                    シミュレーションは、人間の視覚系を模倣し、「CGH面」「瞳面」「網膜面」の3つの面を定義して光の伝搬を計算します。主な特徴は以下の通りです。
+                </p>
+                <ul>
+                    <li><strong>シフト角スペクトル伝搬法:</strong> 光の伝搬計算にこの手法を用いることで、観察者の視点が光軸からずれている（＝正面以外から見ている）状況もシミュレーション可能になりました。</li>
+                    <li><strong>参照光成分の除去:</strong> CGHの計算過程で生じる不要な「参照光」が再生像にノイズとして重なる問題を、「ゼロパディング法」を用いて解決しました。これは計算領域を仮想的に広げることで物体光と参照光を空間的に分離し、物体光のみを抽出する手法です。</li>
+                    <li><strong>高解像度CGHへの対応:</strong> メモリ使用量の観点から一度に処理できない巨大なCGHデータに対し、データを分割してそれぞれ伝搬計算を行い、最終的に統合する「分割処理」を実装しました。これにより、PCの計算リソースの制約を受けずに高解像度CGHを扱えるようになりました。</li>
+                </ul>
+
+                <h4>結果と結論</h4>
+                <p>
+                    開発したプログラムにより、CGHから物体光のみを正確に抽出し、人間の瞳の位置に合わせて光を伝搬させることで、光軸から外れた任意の位置での再生像をシミュレートすることに成功しました。また、分割処理によって、従来は扱えなかったサイズの大きいCGHの再生シミュレーションも可能となりました。本研究は、CGHの品質評価や出力前のプレビュー精度を向上させる上で貢献するものです。
+                </p>
+            </section>
+
+            <section id="publications">
+                <h2>業績リスト (Publications)</h2>
+                <p>現在、準備中です。</p>
+            </section>
+
+            <section id="contact">
+                <h2>連絡先 (Contact)</h2>
+                <p class="contact">
+                    Email: <a href="mailto:cste25010@g.nihon-u.ac.jp">cste25010@g.nihon-u.ac.jp</a>
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Tenta Toda. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
